@@ -1,32 +1,15 @@
 <template>
 <div class="dashboard">
-  <MyPhotos v-if="user" />
-  <Login v-else />
+  <Survey></Survey>
 </div>
 </template>
 
 <script>
-import MyPhotos from '@/components/MyPhotos.vue';
-import Login from '@/components/Login.vue';
-import axios from 'axios';
+import Survey from '@/components/SurveyLayout.vue';
 export default {
   name: 'dashboard',
   components: {
-    MyPhotos,
-    Login,
-  },
-  async created() {
-    try {
-      let response = await axios.get('/api/users');
-      this.$root.$data.user = response.data.user;
-    } catch (error) {
-      this.$root.$data.user = null;
-    }
-  },
-  computed: {
-    user() {
-      return this.$root.$data.user;
-    }
+    Survey,
   }
 }
 </script>
@@ -37,4 +20,3 @@ export default {
   padding-top: 10px;
 }
 </style>
-
