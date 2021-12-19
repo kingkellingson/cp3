@@ -15,6 +15,8 @@
 
 <script>
 import CartList from "../components/CartList.vue"
+const Chance = require('chance');
+const chance = new Chance();
 export default {
   name: 'Cart',
   components: {

@@ -4,7 +4,7 @@
     <div class="product" v-for="product in products" :key="product.id">
       <div class="info">
         <h1 v-if="product.living">{{product.name}}</h1>
-        <h1 v-else>**Dead {{product.name}}**</h1>
+        <h1 v-else>*Dead* {{product.name}}</h1>
         <p v-if="product.living">{{product.type}}</p>
         <p v-else>This animal is Dead</p>
       </div>
