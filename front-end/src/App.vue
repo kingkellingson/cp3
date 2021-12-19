@@ -1,12 +1,33 @@
 <template>
   <div id="app">
     <header id="header">
-      <h1>Survey Creator</h1>
+      <h1>Noah's Ark Adventure</h1>
       <nav>
-        <router-link to="/"><i class="fas fa-home"></i></router-link>
-        <router-link to="/dashboard"><i class="fas fa-list"></i></router-link>
+        <router-link to="/"><i class="fas fa-list"></i></router-link>
+        <router-link to="/cart"><i class="fas fa-paw"></i></router-link>
       </nav>
     </header>
+    <div id="menu">
+    <div id="brand">
+      <router-link to="/">
+        <img src="/images/arcbanner.png">
+      </router-link>
+    </div>
+    <div id="side">
+      <router-link to="/browse">
+        <div class="menu-item browse">
+          <img src="/images/globe.png">
+          <p>Browse</p>
+        </div>
+      </router-link>
+      <router-link to="/cart">
+        <div class="menu-item">
+          <img src="/images/arclogo.png">
+          <p>{{incart}} Animal{{plural ? 's' : ''}}</p>
+        </div>
+      </router-link>
+    </div>
+  </div>
     <router-view />
     <!-- footer -->
     <div class="footer">
@@ -16,17 +37,50 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'Menu',
+  data() {
+    return {
+      
+    }
+  },
+  computed: {
+    incart() {
+      
+      return this.$root.$data.cart.length;
+    },
+    plural() {
+      if (this.$root.$data.cart.length != 1)
+      {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+  },
+  methods: {
+  }
+}
+</script>
 
 <style>
 /* Color scheme: https://paletton.com/#uid=7040u0knHs+edG7jrvYscpiuCk2 */
 /* red: #e74c3c
  * blue: #277E8E
  */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   font-size: 13pt;
-  margin: 0px 200px;
+  margin: 0px 100px;
+  background-color: #eeeeee;
 }
 
 @media screen and (max-width: 1100px) {
@@ -81,6 +135,57 @@ h2 {
   background-color: #277E8E;
 }
 
+/*THIS IS THE ADDED STUFF*/
+
+
+#menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-template-areas: "none brand side";
+  margin-bottom: 50px;
+}
+
+#menu a {
+  color: #B84901;
+}
+
+#brand {
+  grid-area: brand;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+#brand img {
+  height: 400px;
+}
+
+#side {
+  grid-area: side;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#side img {
+  width: 50px;
+}
+
+.menu-item {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item p {
+  margin: 0px;
+}
+
+.browse {
+  margin-right: 50px;
+}
 
 /* Footer  */
 .footer {

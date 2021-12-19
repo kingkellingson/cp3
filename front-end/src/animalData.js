@@ -1,533 +1,532 @@
 const Chance = require('chance');
 const chance = new Chance();
 
-let animalData = [
+let animalData =  [
   {
-    name: 'cheetah',
-    type: 'mammal',
-    legs: 4,
+    name: 'Cheetah',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['orange', 'brown', 'black'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 1,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://cdn.britannica.com/s:300x300/01/152301-120-9ABF227D.jpg'
   },
   {
-    name: 'brown bear',
-    type: 'mammal',
-    legs: 4,
+    name: 'Brown Bear',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['brown'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
-    photoUrl: 'https://beartrust.org/wp-content/uploads/2016/08/Bear-Den-photo.jpg'
+    id: 2,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/2010-kodiak-bear-1.jpg/1200px-2010-kodiak-bear-1.jpg'
   },
   {
-    name: 'beluga whale',
-    type: 'mammal',
-    legs: 0,
+    name: 'Beluga Whale',
+    type: 'Mammal',
+    living: true, legs: 0,
     colors: ['grey', 'blue'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 3,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://i.pinimg.com/236x/58/0c/d9/580cd9bbb76ee46897bb6b99b86b5ad0--dugong-beluga.jpg'
   },
   {
-    name: 'dolphin',
-    type: 'mammal',
-    legs: 0,
+    name: 'Dolphin',
+    type: 'Mammal',
+    living: true, legs: 0,
     colors: ['grey', 'blue'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 4,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://assets3.thrillist.com/v1/image/2781802/size/tmg-article_default_mobile.jpg'
   },
   {
-    name: 'giraffe',
-    type: 'mammal',
-    legs: 4,
+    name: 'Giraffe',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['orange', 'brown', 'black'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 5,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://cdn.britannica.com/s:400x400/55/75855-004-7CB8C9F0.jpg'
   },
   {
-    name: 'lion',
-    type: 'mammal',
-    legs: 4,
+    name: 'Lion',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['orange', 'brown', 'yellow'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 6,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/1200px-Lion_waiting_in_Namibia.jpg'
   },
   {
-    name: 'otter',
-    type: 'mammal',
-    legs: 4,
+    name: 'Otter',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['brown', 'black', 'white'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 7,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg'
   },
   {
-    name: 'siberian tiger',
-    type: 'mammal',
-    legs: 4,
+    name: 'Siberian Tiger',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['orange', 'black', 'white'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 8,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://images3.alphacoders.com/237/thumb-350-237719.jpg'
   },
   {
-    name: 'wolf',
-    type: 'mammal',
-    legs: 4,
+    name: 'Wolf',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['grey', 'black', 'white', 'brown'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
-    photoUrl: 'https://thetorngats.com/wp-content/uploads/2016/04/Wolf_Square.jpg'
+    id: 9,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
+    photoUrl: 'https://i.natgeofe.com/k/093c14b4-978e-41f7-b1aa-3aff5d1c608a/gray-wolf-closeup_2x3.jpg'
   },
   {
-    name: 'polar bear',
-    type: 'mammal',
-    legs: 4,
+    name: 'Polar Bear',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['white'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 10,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://secure.i.telegraph.co.uk/multimedia/archive/01964/BBX8JM_1964794c.jpg'
   },
   {
-    name: 'gazelle',
-    type: 'mammal',
-    legs: 4,
+    name: 'Gazelle',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['brown'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 11,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/2009-thom-gazelle.jpg/220px-2009-thom-gazelle.jpg'
   },
   {
-    name: 'hedgehog',
-    type: 'mammal',
-    legs: 4,
+    name: 'Hedgehog',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['brown', 'black'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 12,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://vetmed.illinois.edu/wp-content/uploads/2017/12/pc-keller-hedgehog.jpg'
   },
   {
-    name: 'beaver',
-    type: 'mammal',
-    legs: 4,
+    name: 'Beaver',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['brown'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 13,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://i.pinimg.com/originals/ba/c5/ac/bac5accca8d640bfc57e14b8558d075d.jpg'
   },
   {
-    name: 'python',
-    type: 'reptile',
-    legs: 0,
+    name: 'Python',
+    type: 'Reptile',
+    living: true, legs: 0,
     colors: ['green'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
-    photoUrl: 'https://news.nationalgeographic.com/content/dam/news/2018/06/18/reticulated-python-attack/01-reticulated-python-nationalgeographic_2649258.ngsversion.1529343005200.adapt.1900.1.jpg'
+    id: 14,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
+    photoUrl: 'https://i.natgeofe.com/n/7fef9761-077c-45d0-9cca-78a984b9d614/burmese-python_thumb.jpg'
   },
   {
-    name: 'tortoise',
-    type: 'reptile',
-    legs: 4,
+    name: 'Tortoise',
+    type: 'Reptile',
+    living: true, legs: 4,
     colors: ['green', 'brown'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 15,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://images-na.ssl-images-amazon.com/images/I/913efLFAXIL._SL1500_.jpg'
   },
   {
-    name: 'crocodile',
-    type: 'reptile',
-    legs: 4,
+    name: 'Crocodile',
+    type: 'Reptile',
+    living: true, legs: 4,
     colors: ['green'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 16,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/76/Bazoule_sacred_crocodiles_MS_6709cropped.JPG'
   },
   {
-    name: 'gila monster',
-    type: 'reptile',
-    legs: 4,
+    name: 'Gila Monster',
+    type: 'Reptile',
+    living: true, legs: 4,
     colors: ['green'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 17,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'http://gallery.kingsnake.com/data/115447outsidegilas_013-med.jpg'
   },
   {
-    name: 'iguana',
-    type: 'reptile',
-    legs: 4,
+    name: 'Iguana',
+    type: 'Reptile',
+    living: true, legs: 4,
     colors: ['green'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 18,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Portrait_of_an_Iguana.jpg'
   },
   {
-    name: 'chameleon',
-    type: 'reptile',
-    legs: 4,
+    name: 'Chameleon',
+    type: 'Reptile',
+    living: true, legs: 4,
     colors: ['green', 'red', 'yellow', 'orange', 'blue', 'purple', 'pink'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
-    photoUrl: 'https://kids.nationalgeographic.com/content/dam/kids/photos/animals/Reptiles/A-G/chameleon-sleepy.adapt.945.1.jpg'
+    id: 19,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
+    photoUrl: 'https://i.natgeofe.com/k/54be71b2-c63a-4020-af84-885d02a7031e/chameleon-colors_4x3.jpg'
   },
   {
-    name: 'painted turtle',
-    type: 'reptile',
-    legs: 4,
+    name: 'Painted Turtle',
+    type: 'Reptile',
+    living: true, legs: 4,
     colors: ['green', 'orange', 'brown', 'yellow'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 20,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://www.earthrangers.com/public/content/wildwire/bigstock-Midland-Painted-Turtle-Basking-35339966.jpg'
   },
   {
-    name: 'king cobra',
-    type: 'reptile',
-    legs: 0,
+    name: 'King Cobra',
+    type: 'Reptile',
+    living: true, legs: 0,
     colors: ['green', 'black', 'yellow'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 21,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://i.ytimg.com/vi/Rn1Aqa2eG3A/maxresdefault.jpg'
   },
   {
-    name: 'gecko',
-    type: 'reptile',
-    legs: 4,
+    name: 'Gecko',
+    type: 'Reptile',
+    living: true, legs: 4,
     colors: ['green', 'yellow', 'orange'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 22,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Gecko.jpg'
   },
 
   {
-    name: 'viper',
-    type: 'reptile',
-    legs: 0,
+    name: 'Viper',
+    type: 'Reptile',
+    living: true, legs: 0,
     colors: ['green', 'yellow', 'brown'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 23,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Bamboo_pit_viper_-_head_profile.jpg'
   },
   {
-    name: 'macaw',
-    type: 'bird',
-    legs: 2,
+    name: 'Macaw',
+    type: 'Bird',
+    living: true, legs: 2,
     colors: ['green', 'yellow', 'red', 'orange'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 24,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://lafeber.com/pet-birds/wp-content/uploads/2018/06/Blue-and-Gold-Macaw-300x300.jpg'
 
   },
   {
-    name: 'great blue heron',
-    type: 'bird',
-    legs: 2,
+    name: 'Great Blue Heron',
+    type: 'Bird',
+    living: true, legs: 2,
     colors: ['white', 'blue'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
-    photoUrl: 'https://d1ia71hq4oe7pn.cloudfront.net/photo/70689641-480px.jpg'
+    id: 25,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/67/GBHfish5.jpg'
   },
   {
-    name: 'flamingo',
-    type: 'bird',
-    legs: 2,
+    name: 'Flamingo',
+    type: 'Bird',
+    living: true, legs: 2,
     colors: ['pink', 'white'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
-    photoUrl: 'https://kids.nationalgeographic.com/content/dam/kids/photos/animals/Birds/A-G/flamingo-standing.ngsversion.1396530994611.jpg'
+    id: 26,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
+    photoUrl: 'https://i.natgeofe.com/k/40a56f75-39ec-40d7-9b8e-da7fa289c066/flamingo-standing_3x4.jpg'
   },
   {
-    name: 'egret',
-    type: 'bird',
-    legs: 2,
+    name: 'Egret',
+    type: 'Bird',
+    living: true, legs: 2,
     colors: ['white'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 27,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Ardea_modesta.jpg/220px-Ardea_modesta.jpg'
   },
   {
-    name: 'puffin',
-    type: 'bird',
-    legs: 2,
+    name: 'Puffin',
+    type: 'Bird',
+    living: true, legs: 2,
     colors: ['white', 'orange', 'black'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
-    photoUrl: 'https://d1ia71hq4oe7pn.cloudfront.net/og/75224141-1200px.jpg'
+    id: 28,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/c4/Puffin_%28Fratercula_arctica%29.jpg'
   },
   {
-    name: 'ostrich',
-    type: 'bird',
-    legs: 2,
+    name: 'Ostrich',
+    type: 'Bird',
+    living: true, legs: 2,
     colors: ['brown', 'white'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
-    photoUrl: 'https://kids.nationalgeographic.com/content/dam/kids/photos/animals/Birds/H-P/ostrich-running.ngsversion.1412640507670.jpg'
+    id: 29,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
+    photoUrl: 'https://animalfactguide.com/wp-content/uploads/2013/10/ostrich.jpg'
   },
   {
-    name: 'peacock',
-    type: 'bird',
-    legs: 2,
+    name: 'Peacock',
+    type: 'Bird',
+    living: true, legs: 2,
     colors: ['green', 'blue', 'black'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 30,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://st2.depositphotos.com/1791514/11405/i/950/depositphotos_114055636-stock-photo-peacock-peafowl-beautiful-spread-of.jpg'
   },
   {
-    name: 'great horned owl',
-    type: 'bird',
-    legs: 2,
+    name: 'Great Horned Owl',
+    type: 'Bird',
+    living: true, legs: 2,
     colors: ['black', 'brown'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
-    photoUrl: 'https://d1ia71hq4oe7pn.cloudfront.net/photo/63741611-480px.jpg'
+    id: 31,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Bubo_virginianus_06.jpg/1200px-Bubo_virginianus_06.jpg'
   },
   {
-    name: 'king penguin',
-    type: 'bird',
-    legs: 2,  
+    name: 'King Penguin',
+    type: 'Bird',
+    living: true, legs: 2,  
     colors: ['white', 'yellow', 'black'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 32,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://secure.i.telegraph.co.uk/multimedia/archive/02137/love_penguin_2137240i.jpg'
   },
   {
-    name: 'bald eagle',
-    type: 'bird',
-    legs: 2,
+    name: 'Bald Eagle',
+    type: 'Bird',
+    living: true, legs: 2,
     colors: ['white', 'brown'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 33,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/Bald_Eagle_Portrait.jpg'
   },
   {
-    name: 'american toad',
-    type: 'amphibian',
-    legs: 4,
+    name: 'American Toad',
+    type: 'Amphibian',
+    living: true, legs: 4,
     colors: ['green'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 34,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'http://herpsofnc.org/wp-content/uploads/2016/11/14123314300_9808285854_b.jpg'
   },
   {
-    name: 'salamander',
-    type: 'amphibian',
-    legs: 4,
+    name: 'Salamander',
+    type: 'Amphibian',
+    living: true, legs: 4,
     colors: ['green', 'black', 'yellow', 'brown'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
-    photoUrl: 'https://opimedia.azureedge.net/-/media/images/men/editorial/articles/magazine-articles/2007/02-01/a-wealth-of-salamanders/spotted-salamander-jpg.jpg'
+    id: 35,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
+    photoUrl: 'https://i.natgeofe.com/k/a42a2dd2-b777-4d84-890d-0f604db36781/spotted-salamander-closeup_4x3.jpg'
   },
   {
-    name: 'tree frog',
-    type: 'amphibian',
-    legs: 4,
+    name: 'Tree Frog',
+    type: 'Amphibian',
+    living: true, legs: 4,
     colors: ['green', 'blue', 'orange'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 36,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://c1.staticflickr.com/9/8820/27964054663_38a074335e_b.jpg'
   },
   {
-    name: 'bullfrog',
-    type: 'amphibian',
-    legs: 4,
+    name: 'Bullfrog',
+    type: 'Amphibian',
+    living: true, legs: 4,
     colors: ['green'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
-    photoUrl: 'https://www.sciencedaily.com/images/2018/05/180507084821_1_540x360.jpg'
+    id: 37,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
+    photoUrl: 'https://i.natgeofe.com/n/d9f60f21-7487-4b78-b023-6741d32ce5f7/1677360.jpg?w=636&h=424'
   },
   {
-    name: 'tomato frog',
-    type: 'amphibian',
-    legs: 4,
+    name: 'Tomato Frog',
+    type: 'Amphibian',
+    living: true, legs: 4,
     colors: ['red'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 38,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'http://www.frogpets.com/wp-content/uploads/2018/05/tomato-frog.jpg'
   },
   {
-    name: 'giant marine toad',
-    type: 'amphibian',
-    legs: 4,
+    name: 'Giant Marine Toad',
+    type: 'Amphibian',
+    living: true, legs: 4,
     colors: ['brown'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 39,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://www.backwaterreptiles.com/images/toads/giant-marine-toad-for-sale.jpg'
   },
   {
-    name: 'moss frog',
-    type: 'amphibian',
-    legs: 4,
+    name: 'Moss Frog',
+    type: 'Amphibian',
+    living: true, legs: 4,
     colors: ['green', 'brown'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 40,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://i.pinimg.com/originals/d3/3f/68/d33f6853f266807a8836e678778c39fc.jpg'
   },
   {
-    name: 'sturgeon',
-    type: 'fish',
-    legs: 0,
+    name: 'Sturgeon',
+    type: 'Fish',
+    living: true, legs: 0,
     colors: ['blue', 'white', 'grey'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 41,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://seahistory.org/wp-content/uploads/Sturgeon.jpg'
   },
   {
-    name: 'rainbow trout',
-    type: 'fish',
-    legs: 0,
+    name: 'Rainbow Trout',
+    type: 'Fish',
+    living: true, legs: 0,
     colors: ['green', 'pink', 'white'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 42,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/61/Colorful_male_rainbow_trout.jpg'
   },
   {
-    name: 'coho salmon',
-    type: 'fish',
-    legs: 0,
+    name: 'Coho Salmon',
+    type: 'Fish',
+    living: true, legs: 0,
     colors: ['pink', 'white', 'grey', 'silver'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 43,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://cdn2.webdamdb.com/1280_1FGHYgBlOmmk.jpg?1507320214'
   },
   {
-    name: 'chinook salmon',
-    type: 'fish',
-    legs: 0,
+    name: 'Chinook Salmon',
+    type: 'Fish',
+    living: true, legs: 0,
     colors: ['white', 'gray', 'orange'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 44,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Coho_Spawning_on_the_Salmon_River_%2816335492972%29.jpg'
   },
   {
-    name: 'bull trout',
-    type: 'fish',
-    legs: 0,
-    
+    name: 'Bull Trout',
+    type: 'Fish',
+    living: true, legs: 0,
+    id: 45,
     colors: ['yellow', 'gray'],
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://www.fws.gov/oregonfwo/images/secondary_banner/bull_trout_banner.jpg'
   },
   {
-    name: 'african lungfish',
-    type: 'fish',
-    legs: 0,
+    name: 'African Lungfish',
+    type: 'Fish',
+    living: true, legs: 0,
     colors: ['silver'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 46,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'http://www.tropical-fish-keeping.com/wp-content/uploads/2015/10/Gilled-African-lungfish-Protopterus-amphibius.jpg'
   },
   {
-    name: 'pirahna',
-    type: 'fish',
-    legs: 0,
+    name: 'Pirahna',
+    type: 'Fish',
+    living: true, legs: 0,
     colors: ['gray', 'pink', 'brown'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 47,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Pirhana06.jpg/1200px-Pirhana06.jpg'
   },
   {
-    name: 'swordfish',
-    type: 'fish',
-    legs: 0,
+    name: 'Swordfish',
+    type: 'Fish',
+    living: true, legs: 0,
     colors: ['blue', 'white', 'gray'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
-    photoUrl: 'http://ichef.bbci.co.uk/wwfeatures/wm/live/624_351/images/live/p0/4d/4g/p04d4gct.jpg'
+    id: 48,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
+    photoUrl: 'https://i.natgeofe.com/n/923d8c4e-1598-472c-90a4-01c06d65294d/01-swordfish-phenomena_3x4.jpg'
   },
   {
-    name: 'bluehead wrasse',
-    type: 'fish',
-    legs: 0,
+    name: 'Bluehead Wrasse',
+    type: 'Fish',
+    living: true, legs: 0,
     colors: ['green', 'yellow', 'white', 'black', 'blue'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 49,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://rollingharbour.files.wordpress.com/2017/02/bluehead_wrasse_thallasoma_bifasciatum_oregonstate-edu-pinterest.jpg'
   },
   {
-    name: 'seahorse',
-    type: 'fish',
-    legs: 0,
+    name: 'Seahorse',
+    type: 'Fish',
+    living: true, legs: 0,
     colors: ['yellow', 'orange', 'pink'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 50,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://www.shalomadventure.com/images/cache/7909cf33bee0bc9bde4af813a9b9dcce_w180_h180_cp.jpg'
   },
   {
-    name: 'stringray',
-    type: 'fish',
-    legs: 0,
+    name: 'Stringray',
+    type: 'Fish',
+    living: true, legs: 0,
     colors: ['blue', 'gray', 'white'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 51,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://c.ndtvimg.com/2018-11/g23mgtg_stingray-pixabay_625x300_18_November_18.jpg'
   },
   {
-    name: 'giant panda',
-    type: 'mammal',
-    legs: 4,
+    name: 'Giant Panda',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['black', 'white'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 52,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://www.chinadiscovery.com/assets/images/travel-guide/dujiangyan/panda-base/giant-panda.jpg'
   },
   {
-    name: 'sloth',
-    type: 'mammal',
-    legs: 4,
+    name: 'Sloth',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['brown', 'white', 'black'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
-    photoUrl: 'https://www.greenwaytours.com/wp-content/uploads/2018/01/limon-highlights-tour-sloths.jpg'
+    id: 53,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
+    photoUrl: 'https://i.natgeofe.com/k/fbdb91c9-787d-4f5b-8eec-26ac171722b7/5-reasons-sloth_4x3.jpg'
   },
   {
-    name: 'red panda',
-    type: 'mammal',
-    legs: 4,
+    name: 'Red Panda',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['red', 'white'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 54,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'http://static1.squarespace.com/static/5547e3e5e4b0d6cf695321c9/t/599f37ecccc5c58f6c392e70/1503606804023/REDPANDA.jpg'
   },
   {
-    name: 'arctic fox',
-    type: 'mammal',
-    legs: 4,
+    name: 'Arctic Fox',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['white'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
-    photoUrl: 'https://www.zoonewengland.org/media/338544/arcticfox_gallery2.jpg'
+    id: 55,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/83/Iceland-1979445_%28cropped_3%29.jpg'
   },
   {
-    name: 'zebra',
-    type: 'mammal',
-    legs: 4,
+    name: 'Zebra',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['black', 'white'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
-    photoUrl: 'https://media.mnn.com/assets/images/2014/04/zebra%20facts.jpg.653x0_q80_crop-smart.jpg'
+    id: 56,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
+    photoUrl: 'https://images.unsplash.com/photo-1526095179574-86e545346ae6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8emVicmF8ZW58MHx8MHx8&w=1000&q=80'
   },
   {
-    name: 'lemur',
-    type: 'mammal',
-    legs: 4,
+    name: 'Lemur',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['brown', 'white', 'black'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
-    photoUrl: 'https://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/Q-Z/ring-tailed-lemur-pair.ngsversion.1411258003919.jpg'
+    id: 57,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
+    photoUrl: 'https://cdn.britannica.com/20/154120-050-78DE15C0/lemur.jpg'
   },
   {
-    name: 'snow leopard',
-    type: 'mammal',
-    legs: 4,
+    name: 'Snow Leopard',
+    type: 'Mammal',
+    living: true, legs: 4,
     colors: ['white', 'black'],
-    
-    status: chance.pickone(['alive', 'deceased', 'alive', 'alive', 'alive']),
+    id: 58,
+    status: chance.pickone(['alive', 'deceased', 'deceased', 'alive', 'alive']),
     photoUrl: 'https://vignette.wikia.nocookie.net/onepiecefanfiction/images/f/fa/Snow-leopard.jpg/revision/latest?cb=20150421142449'
   }
 ];
 
 
 export default animalData;
-

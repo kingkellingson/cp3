@@ -205,11 +205,13 @@ export default {
 
 h1 {
   font-size: 28px;
+  font-family: 'Work Sans', sans-serif;
   font-variant: capitalize;
 }
 
 h2 {
   font-size: 18px; 
+  font-family: 'Work Sans', sans-serif;
 }
 
 
@@ -247,10 +249,12 @@ h2 {
 
 .hero form {
   font-size: 14px;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .hero form legend {
   font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
 }
 
 input {
@@ -269,6 +273,7 @@ input {
   padding: 5px 20px;
   border-radius: 30px;
   font-size: 10px;
+  font-family: 'Work Sans', sans-serif;
   background-color: #d9534f;
   color: #fff;
 }
