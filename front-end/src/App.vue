@@ -102,7 +102,7 @@ body {
   left: 50%;
   transform: translate(-50%, 0);
   /* Color and alignment */
-  background: #F7B733;
+  background: #277E8E;
   text-align: center;
   box-shadow: 0 0 0 1em #FFF;
 }

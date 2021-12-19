@@ -5,7 +5,7 @@
   </div>
   <h1> Your Animals: </h1>
   <div class="info-holder">
-    <h2> Total number of animals: {{this.$root.$data.cart.length}}</h2>
+    <h2> Total number of mouths: {{this.$root.$data.cart.length}}</h2>
     <h2> Total number of legs: {{this.$root.$data.cart.map(i=>i.legs).reduce((a,b)=>a+b)}}</h2>
   </div>
   <CartList :products="cart" />
@@ -54,6 +54,8 @@ export default {
 
 h1 {
   color: black;
+  text-align: center;
+  font-size: 22px;
 }
 
 .button-holder {
@@ -62,7 +64,7 @@ h1 {
 }
 
  .ui.button:focus{
-  background-color:#4ABDAC; 
+  background-color:#277E8E;
   color: black; 
 } 
 
@@ -80,5 +82,6 @@ h1 {
   text-align: center;
   vertical-align: center;
   margin: 0;
+  font-size: 15px;
 }
 </style>
